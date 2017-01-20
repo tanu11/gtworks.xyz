@@ -16,7 +16,7 @@
 
 
  */   body, html { font-size: 100%; padding: 0; margin: 0; }
-
+       body{min-width: 600px;}
 
 
 
@@ -28,7 +28,7 @@
         font-size: 26px;
 
        }
-       .navbar{height: 69px;padding-top: 10px;background-color:white;box-shadow:1px 1px 10px 1px black}
+       .navbar{height: 69px;padding-top: 10px;background-color:white;box-shadow:1px 1px 10px 1px black;width: 100%;}
        .nav li a{color:#c62828;font-size:20px;font-family: 'changa one',cursive;letter-spacing: 2px;}
        .nav li a:hover{color:#990000;background-color: white;}
        
@@ -38,7 +38,6 @@
        @media only screen and (max-width: 750px)
         {
            #mynavbar{background-color:#F8F8F8; position: relative;top:-6px;}            
-
 
         }
       
@@ -50,6 +49,8 @@
 
        letter-spacing: 4px;
      }
+     
+
 
        .navbar-header>a:hover
        {
@@ -66,6 +67,7 @@
         background-color:#333333  ;
         z-index: 100;
          margin-top: 40px;
+         width: 100%;
           box-shadow:1px 3px 20px 1px black ;
       }       
      
@@ -139,6 +141,16 @@
           padding-top: 20px;
           padding-bottom: 20px;
         }
+         @media only screen and (min-width: 750px)
+        {   .aboutmid
+             {padding-left: 0px;}
+             .cube
+             {
+              margin: 0px;
+             }
+
+
+        }
 
         .aboutmid a
         {
@@ -168,7 +180,7 @@
         }
 
         /* The two faces of the cube */
-        
+       
 
         /* Position the faces */
         .flippety ,.flippety1,.flippety2,.flippety3,.flippety4,.flippety5
@@ -182,10 +194,7 @@
 
         .flop ,.flop1,.flop2, .flop3,.flop4,.flop5{
            
-          /*background: -webkit-linear-gradient(90deg,white,#F8F8F8); /* For Safari 5.1 to 6.0 */
-            /*background: -o-linear-gradient(70deg,white,#D1CFCF );/* For Opera 11.1 to 12.0 */
-           /* background: -moz-linear-gradient(70deg,white,#D1CFCF ); /* For Firefox 3.6 to 15 */
-            /*background: linear-gradient(70deg,white,#D1CFCF ); /* Standard syntax */
+        
             padding: 20px;
             padding-top: 5px;
 
@@ -334,11 +343,8 @@
              background-size:100% 70%;
             ; 
             
-                        /* For browsers that do not support gradients */
-         /*   background: -webkit-linear-gradient(70deg,white,#D1CFCF ); /* For Safari 5.1 to 6.0 */
-            /*background: -o-linear-gradient(70deg,white,#D1CFCF );/* For Opera 11.1 to 12.0 */
-           /* background: -moz-linear-gradient(70deg,white,#D1CFCF ); /* For Firefox 3.6 to 15 */
-            /*background: linear-gradient(70deg,white,#D1CFCF ); /* Standard syntax */"
+                        
+         
 
          }
 
@@ -407,10 +413,7 @@
            
              padding: 5%;
                padding-top: 4%;
-
-                            /* For browsers that do not support gradients */
-            /**/
-
+ 
 
              }
              .aboutmetext
@@ -470,7 +473,7 @@
         .contact
         {
             
-         background-image: url("../images/about1.jpg");                     /* For browsers that do not support gradients */
+         background-image: url("../images/about1.jpg");                     
          background-color: #eeeeee;
     
           opacity: 1;
@@ -501,6 +504,20 @@
         {   animation-duration: 2s;
           animation-delay: 5s;
           
+
+        }
+         @media only screen and (max-width: 750px)
+        {   #contact1
+          {
+            margin-left: 20px;
+          }
+           #contact2
+        {
+          margin-right: 20px;
+
+        }
+
+
 
         }
        .contact_wrapper {
@@ -641,55 +658,3 @@
 
 
    
-      /* Container box to set the sides relative to */
-.dice {
-  width: 400px;
-
-  height:35px;
-
-  -webkit-transition: -webkit-transform .33s;
-  transition: transform .33s; /* Animate the transform properties */
-
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; /* <-NB */
-}
-
-/* The two faces of the cube
--webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
-  box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
-
- */
-.flippety6{
-  background:#c62828;
-  
-  height: 35px;
-  
-}
-.flop6
-{   background: -webkit-linear-gradient(180deg,white,#e53935 ); /* For Safari 5.1 to 6.0 */
-              background: -o-linear-gradient(70deg,#d32f2f,#e53935 );;/* For Opera 11.1 to 12.0 */
-              background: -moz-linear-gradient(70deg,#d32f2f,#c62828);; /* For Firefox 3.6 to 15 */
-              background: linear-gradient(120deg,#ef5350 ,#b71c1c); /* Standard syntax */"
-  background-color:#d32f2f;
-  height: 35px;
-
-}
-
-/* Position the faces */
-.flippety6 {
-  -webkit-transform: translateZ(15px);
-  transform: translateZ(16px);
-}
-
-.flop6 {
-  -webkit-transform: rotateX(-90deg) translateZ(-50px);
-  transform: rotateX(-90deg) translateZ(-40px);
-}
-
-/* Rotate the cube */
-.dice:hover {
-  -webkit-transform: rotateX(89deg);
-  transform: rotateX(89deg); /* Text bleed at 90º */
-}
-
-    
